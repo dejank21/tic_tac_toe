@@ -34,11 +34,12 @@ class Board
     @cells[position] = symbol if valid_move?(position)
   end
 
-  # Checks if the move is valid 
+  # Checks if the move is valid
   def valid_move?(input)
     position = input.to_i
     return position if position.between?(1, 9) && @cells[position] == position
-    false
+
+    puts 'Invalid move. Please try again.'
   end
 
   # Checks if the board is full
@@ -53,4 +54,3 @@ class Board
     end
   end
 end
-
