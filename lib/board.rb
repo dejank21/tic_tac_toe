@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# This class represents the Tic Tac Toe board and assositated methods
+# This class represents the Tic Tac Toe board and assosiated methods
 # It is responsible for displaying the board, updating the cells, checking for valid moves, and win conditions.
 
 class Board
