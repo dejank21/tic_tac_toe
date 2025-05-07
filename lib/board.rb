@@ -4,8 +4,6 @@
 # It is responsible for displaying the board, updating the cells, checking for valid moves, and win conditions.
 
 class Board
-  attr_reader :cells
-
   def initialize
     @cells = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
   end
@@ -17,17 +15,15 @@ class Board
     [1, 5, 9], [3, 5, 7]             # Diagonal
   ].freeze
 
-  # rubocop:disable Metrics/AbcSize
   def display_board
     puts "\n"
-    puts " #{cells[1]} | #{cells[2]} | #{cells[3]} "
+    puts " #{@cells[1]} | #{@cells[2]} | #{@cells[3]} "
     puts '---+---+---'
-    puts " #{cells[4]} | #{cells[5]} | #{cells[6]} "
+    puts " #{@cells[4]} | #{@cells[5]} | #{@cells[6]} "
     puts '---+---+---'
-    puts " #{cells[7]} | #{cells[8]} | #{cells[9]} "
+    puts " #{@cells[7]} | #{@cells[8]} | #{@cells[9]} "
     puts "\n"
   end
-  # rubocop:enable Metrics/AbcSize
 
   # Updates the cell at the given position with the symbol if the move is valid
   def update_cell(position, symbol)
