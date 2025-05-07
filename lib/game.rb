@@ -7,7 +7,6 @@ require_relative 'player'
 # This file contains the game logic for Tic Tac Toe.
 class Game
   include Display
-  attr_reader :board, :current_player
 
   def initialize
     @board = Board.new
