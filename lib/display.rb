@@ -2,7 +2,6 @@
 
 # This file contains the messages that will be displayed to the user
 module Display
-  
   def display_intro
     "\nWelcome to Tic Tac Toe!"
   end
@@ -16,7 +15,7 @@ module Display
   end
 
   def duplicate_symbol
-    "Symbol already taken. Please choose a different symbol."
+    'Symbol already taken. Please choose a different symbol.'
   end
 
   def display_player_turn(player_name)
@@ -24,7 +23,7 @@ module Display
   end
 
   def display_invalid_move
-    "Invalid move. Please try again."
+    'Invalid move. Please try again.'
   end
 
   def display_winner(player_name)

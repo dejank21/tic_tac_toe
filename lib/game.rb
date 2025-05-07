@@ -24,7 +24,7 @@ class Game
   end
 
   private
-  
+
   # This method sets up the game by displaying the introduction message
   def game_set_up
     puts display_intro
@@ -40,10 +40,10 @@ class Game
       puts display_name_prompt(player_number)
       name = gets.chomp
       puts display_symbol_prompt(name)
-      
+
       symbol = gets.chomp.upcase
-      until symbol == 'X' || symbol == 'O'
-        puts "Invalid symbol. Please choose X or O."
+      until %w[X O].include?(symbol)
+        puts 'Invalid symbol. Please choose X or O.'
         symbol = gets.chomp.upcase
       end
 
@@ -67,6 +67,7 @@ class Game
     until game_over?
       take_turn
       break if game_over?
+
       # Checks if game over before switiching players
       switch_player
     end
@@ -82,7 +83,7 @@ class Game
 
   # This method allows us to switch between players
   def switch_player
-    @current_player = (@current_player == @player1) ? @player2 : @player1
+    @current_player = @current_player == @player1 ? @player2 : @player1
   end
 
   # This method checks if the game is over
@@ -101,5 +102,4 @@ class Game
       puts display_tie
     end
   end
-
 end

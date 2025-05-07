@@ -1,3 +1,7 @@
+# frozen_string_literal: true
+
+# This is the main file that starts the game. It requires the necessary files and starts the game loop.
+# It also handles the option to play again after the game ends.
 require_relative 'lib/board'
 require_relative 'lib/game'
 require_relative 'lib/display'
@@ -20,5 +24,3 @@ def repeat_game
 end
 
 play_game
-# This is the main file that starts the game. It requires the necessary files and starts the game loop.
-# It also handles the option to play again after the game ends.
