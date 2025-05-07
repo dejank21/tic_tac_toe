@@ -6,16 +6,16 @@ require_relative 'lib/player'
 def play_game
   game = Game.new
   game.play
-  repeate_game
+  repeat_game
 end
 
-def repeate_game
-  puts "Would you like to play again? (y/n)"
+def repeat_game
+  puts 'Would you like to play again? (y/n)'
   answer = gets.chomp.downcase
   if answer == 'y'
     play_game
   else
-    puts "Thanks for playing!"
+    puts 'Thanks for playing!'
   end
 end
 
